@@ -1,0 +1,13 @@
+.first  {
+list-style: none;
+padding: 0;
+}
+.first li {
+padding: 10px 30px;
+background: linear-gradient(to left, #8f8df8 0%, white, #8f8df8);
+box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
+margin-bottom: 5px;
+}
+.first li:last-child {
+border-bottom: none;
+} 
