@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  <form>
+    <table border=0 align="center">
+      <tbody>
+        <tr height=100 valign="bottom">
+          <td colspan="2">
+            Укажите ингридиенты через запятую:
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" id="s1" name="s1" data-separator=", " size=50>
+          </td>
+          <td>
+            <input type="submit" id="b1" value="Поиск">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>
