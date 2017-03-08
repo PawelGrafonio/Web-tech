@@ -1,13 +1,22 @@
 .first  {
 list-style: none;
+width: 130px;
 padding: 0;
+display: block;
+text-decoration: none;
 }
 .first li {
 padding: 10px 30px;
+width: 130px;
 background: linear-gradient(to left, #8f8df8 0%, white, #8f8df8);
 box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
 margin-bottom: 5px;
+display: block;
+text-decoration: none;
 }
 .first li:last-child {
+width: 130px;
 border-bottom: none;
+display: block;
+text-decoration: none;
 }
