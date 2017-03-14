@@ -52,13 +52,15 @@ h1 {
 
 #content {
 }
-h2 {
+h2{
+	text-align: center;
 	margin: 0;
 	padding: 0.5em 0;
 	color:#568945;
 	font-family:Helvetica, Arial, Sans-serif;
 }
-p {
+p{
+	text-align: center;
 	margin: 0;
 	padding: 0.4em 0;
 	color:#686868;
