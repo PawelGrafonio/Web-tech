@@ -45,7 +45,35 @@
       </td>
       <tr>
         <td align="center" colspan="2">
-          <input type="submit" id="sub" value="Регистрация">
+          <input type="submit" id="sub" value="Регистрация" onclick="alert(submitClick())">
+          <script type="text/javascript">
+              $(function (){
+                $('form').submit(function (){
+                  var v_log = document.getElementById('log').value;
+                  var v_nam = document.getElementById('nam').value;
+                  var v_pas = document.getElementById('pas').value;
+                  var v_pas_r = document.getElementById('pas_r').value;
+                  var message = 'ВНИМАНИЕ! \n\r \n\r';
+                  if (v_log === '' || v_nam === '' || v_pas === '' || v_pas_r ==='')
+                    {message += 'Заполните все поля! \n\r';}
+                  if(/^[a-zA-Z1-9_]+$/.test(v_log) === false)
+                    {message += 'В логине должны быть только латинские буквы и символы нижнего подчеркивания \n\r';}
+                  if (parseInt(v_log.substr(0, 1)))
+                    {message += 'Логин должен начинаться с буквы \n\r';}
+                  if (/^[a-zA-Zа-яА-Я_-\s]+$/.test(v_nam) === false)
+                    {message += 'В имени нельзя испольовать цифры и спецсимволы \n\r';}
+                  if (/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/.test(v_pas) === false)
+                    {message += 'Пароль должен содержать минимум 8 символов с использованием строчных и прописных латинских букв, цифр и спецсимволов \n\r';}
+                  if (v_pas_r !== v_pas)
+                    {message += 'Пароли не совпадают \n\r';}
+                  if (message !== 'ВНИМАНИЕ! \n\r \n\r')
+                    {alert(message);
+                    return false;}
+                  else
+                    {return true;}
+                });
+              });
+          </script>
         </td>
       </tr>
     </tbody>
