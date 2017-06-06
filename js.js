@@ -2,13 +2,12 @@ $(document).ready(function() {
 
     // Check for hash value in URL
     $('#nav li a').click(function(){
-      debugger;
       var href = $(this).attr('href');
       $('#content').load(href);
-    $('#content').hide('fast',loadContent);
+    //$('#content').hide('fast',loadContent);
     $('#load').remove();
     $('#wrapper').append('<span id="load">LOADING...</span>');
-    $('#load').fadeIn('normal'); 
+    $('#load').fadeIn('normal');
     function loadContent() {
     	$('#content').load(toLoad,'',showNewContent())
     }
@@ -21,4 +20,5 @@ $(document).ready(function() {
     return false;
 
     });
+
 });
